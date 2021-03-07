@@ -13,6 +13,8 @@
 		4829006625F56766001588A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4829006425F56766001588A8 /* Main.storyboard */; };
 		4829006825F5676A001588A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4829006725F5676A001588A8 /* Assets.xcassets */; };
 		4829006B25F5676A001588A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4829006925F5676A001588A8 /* LaunchScreen.storyboard */; };
+		4829007425F56786001588A8 /* ImageManipulationClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4829007325F56786001588A8 /* ImageManipulationClassifier.mlmodel */; };
+		4829007725F5687E001588A8 /* FakeNewsClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4829007625F5687E001588A8 /* FakeNewsClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4829006725F5676A001588A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4829006A25F5676A001588A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4829006C25F5676A001588A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4829007325F56786001588A8 /* ImageManipulationClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ImageManipulationClassifier.mlmodel; sourceTree = "<group>"; };
+		4829007625F5687E001588A8 /* FakeNewsClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FakeNewsClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,31 @@
 			children = (
 				4829005E25F56765001588A8 /* AppDelegate.swift */,
 				4829006025F56765001588A8 /* SceneDelegate.swift */,
-				4829006225F56765001588A8 /* ViewController.swift */,
-				4829006425F56766001588A8 /* Main.storyboard */,
+				4829007A25F5690C001588A8 /* View */,
+				4829007925F568F1001588A8 /* Controller */,
 				4829006725F5676A001588A8 /* Assets.xcassets */,
 				4829006925F5676A001588A8 /* LaunchScreen.storyboard */,
 				4829006C25F5676A001588A8 /* Info.plist */,
+				4829007325F56786001588A8 /* ImageManipulationClassifier.mlmodel */,
+				4829007625F5687E001588A8 /* FakeNewsClassifier.mlmodel */,
 			);
 			path = FakeBuster;
+			sourceTree = "<group>";
+		};
+		4829007925F568F1001588A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4829006225F56765001588A8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4829007A25F5690C001588A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4829006425F56766001588A8 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4829007725F5687E001588A8 /* FakeNewsClassifier.mlmodel in Sources */,
+				4829007425F56786001588A8 /* ImageManipulationClassifier.mlmodel in Sources */,
 				4829006325F56765001588A8 /* ViewController.swift in Sources */,
 				4829005F25F56765001588A8 /* AppDelegate.swift in Sources */,
 				4829006125F56765001588A8 /* SceneDelegate.swift in Sources */,
