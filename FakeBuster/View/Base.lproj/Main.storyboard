@@ -1,24 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GxO-Qm-M8H">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Prata-Regular.ttf">
+            <string>Prata-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Fake News-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="FakeBuster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="oz5-zM-d0k">
+                                <rect key="frame" x="0.0" y="74" width="390" height="687"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xud-Dn-1tn">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FakeBuster" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCM-Bv-INQ">
+                                                <rect key="frame" x="64" y="0.0" width="262" height="65.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="48"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fake News Recognizer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s4-Tj-EJs">
+                                                <rect key="frame" x="97.666666666666671" y="65.333333333333343" width="194.66666666666663" height="24.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="18"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JAy-QQ-hYI">
+                                        <rect key="frame" x="0.0" y="105" width="390" height="135"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZh-jT-H8I">
+                                                <rect key="frame" x="10" y="0.0" width="370" height="100"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="News URL" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-GX-cv0">
+                                                        <rect key="frame" x="45" y="33" width="280" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="w67-12-5lu"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.32156862745098036" green="0.3529411764705882" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="oNB-GX-cv0" firstAttribute="centerY" secondItem="jZh-jT-H8I" secondAttribute="centerY" id="EJ8-Pt-Xf0"/>
+                                                    <constraint firstItem="oNB-GX-cv0" firstAttribute="centerX" secondItem="jZh-jT-H8I" secondAttribute="centerX" id="MLs-pY-EZ0"/>
+                                                    <constraint firstAttribute="height" constant="100" id="fEs-MP-IUA"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkT-mc-S23">
+                                                <rect key="frame" x="110" y="100" width="170" height="35"/>
+                                                <color key="backgroundColor" red="0.69019607843137254" green="0.70196078431372544" blue="0.69411764705882351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="elm-VU-eyY"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="k3Y-Dq-znj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemFallback" pointSize="15"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Paste From Clipboard">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="jZh-jT-H8I" secondAttribute="trailing" constant="10" id="Z39-ph-SkW"/>
+                                            <constraint firstItem="jZh-jT-H8I" firstAttribute="leading" secondItem="JAy-QQ-hYI" secondAttribute="leading" constant="10" id="hXa-Os-HuG"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waves" translatesAutoresizingMaskIntoConstraints="NO" id="VIe-pG-SAZ">
+                                        <rect key="frame" x="0.0" y="255" width="390" height="432"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ur-JX-Y3D">
+                                <rect key="frame" x="95" y="671" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.28235294117647058" green="0.60784313725490191" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Cgg-pJ-ilm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="MXc-S4-RPz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="24"/>
+                                <state key="normal" title="CHECK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Ur-JX-Y3D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1de-Yu-HgN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Ur-JX-Y3D" secondAttribute="bottom" constant="40" id="HEw-Fy-vKf"/>
+                            <constraint firstItem="oz5-zM-d0k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P8u-1d-cbf"/>
+                            <constraint firstAttribute="trailing" secondItem="oz5-zM-d0k" secondAttribute="trailing" id="QWc-Nh-Afd"/>
+                            <constraint firstItem="oz5-zM-d0k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="RS5-V1-Jsf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oz5-zM-d0k" secondAttribute="bottom" id="sz3-ht-k14"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Fake News" image="book" catalog="system" selectedImage="book.fill" id="z4N-Na-14o"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="jZh-jT-H8I" id="KU0-9z-bT8"/>
+                        <outlet property="checkButton" destination="8Ur-JX-Y3D" id="tbi-mL-FuT"/>
+                        <outlet property="pasteButton" destination="IkT-mc-S23" id="hOL-T2-eNS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="956.92307692307691" y="93.127962085308056"/>
+        </scene>
+        <!--Photo Manipulation-->
+        <scene sceneID="eoa-a4-Bc1">
+            <objects>
+                <viewController id="EhM-z1-dBp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yhs-Ma-l0K">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bzw-O4-4Vy"/>
+                        <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Photo Manipulation" image="camera" catalog="system" selectedImage="camera.fill" id="7Wn-8n-aDq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TRr-Gs-wAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="776.78571428571422"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vFB-Dt-qRL">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GxO-Qm-M8H" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="f3w-gu-nao">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.1479885578" green="0.18060880900000001" blue="0.15619787569999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.28235294119999998" green="0.60784313729999995" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="4CT-Yc-Pv6"/>
+                        <segue destination="EhM-z1-dBp" kind="relationship" relationship="viewControllers" id="e3v-Cc-beQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPZ-9l-nOi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="435.26785714285711"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book" catalog="system" width="128" height="102"/>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="waves" width="375" height="437"/>
+    </resources>
 </document>
