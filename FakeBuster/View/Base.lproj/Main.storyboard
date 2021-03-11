@@ -51,18 +51,17 @@
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="News URL" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-GX-cv0">
                                                         <rect key="frame" x="45" y="33" width="280" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="w67-12-5lu"/>
-                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" textContentType="url"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.32156862745098036" green="0.3529411764705882" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="oNB-GX-cv0" firstAttribute="centerY" secondItem="jZh-jT-H8I" secondAttribute="centerY" id="EJ8-Pt-Xf0"/>
+                                                    <constraint firstItem="oNB-GX-cv0" firstAttribute="leading" secondItem="jZh-jT-H8I" secondAttribute="leading" constant="45" id="Kei-nB-Rcr"/>
                                                     <constraint firstItem="oNB-GX-cv0" firstAttribute="centerX" secondItem="jZh-jT-H8I" secondAttribute="centerX" id="MLs-pY-EZ0"/>
                                                     <constraint firstAttribute="height" constant="100" id="fEs-MP-IUA"/>
+                                                    <constraint firstAttribute="right" secondItem="oNB-GX-cv0" secondAttribute="right" constant="45" id="kIH-fY-fZr"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkT-mc-S23">
@@ -77,6 +76,9 @@
                                                 <state key="normal" title="Paste From Clipboard">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pasteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iw2-kQ-1EP"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -100,6 +102,9 @@
                                 <state key="normal" title="CHECK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="yfo-DL-xhd" kind="presentation" id="cK3-dA-bXg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -122,11 +127,27 @@
                         <outlet property="backgroundView" destination="jZh-jT-H8I" id="KU0-9z-bT8"/>
                         <outlet property="checkButton" destination="8Ur-JX-Y3D" id="tbi-mL-FuT"/>
                         <outlet property="pasteButton" destination="IkT-mc-S23" id="hOL-T2-eNS"/>
+                        <outlet property="urlTextField" destination="oNB-GX-cv0" id="rjh-8m-Gr6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="956.92307692307691" y="93.127962085308056"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zTw-TD-qDd">
+            <objects>
+                <viewController id="yfo-DL-xhd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H8a-Hv-iFo">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aA8-ZW-4is"/>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dmc-V7-mB2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1765" y="93"/>
         </scene>
         <!--Photo Manipulation-->
         <scene sceneID="eoa-a4-Bc1">
@@ -162,12 +183,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2c-bx-L1b">
                                                 <rect key="frame" x="10" y="0.0" width="370" height="225"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XRd-g5-P3Z">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XRd-g5-P3Z">
                                                         <rect key="frame" x="45" y="32.666666666666657" width="280" height="160"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="160" id="x7e-2i-wwE"/>
-                                                            <constraint firstAttribute="width" constant="280" id="zIf-oD-qeE"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewu-BT-uqL">
@@ -182,13 +202,18 @@
                                                         <state key="normal" title="Choose From Gallery">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="chooseButtonPressed:" destination="EhM-z1-dBp" eventType="touchUpInside" id="oby-s3-GdY"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.32156862749999998" green="0.35294117650000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="XRd-g5-P3Z" firstAttribute="centerX" secondItem="W2c-bx-L1b" secondAttribute="centerX" id="0CR-6C-XHH"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XRd-g5-P3Z" secondAttribute="trailing" constant="45" id="0iY-gN-B5e"/>
                                                     <constraint firstItem="Ewu-BT-uqL" firstAttribute="centerX" secondItem="W2c-bx-L1b" secondAttribute="centerX" id="Phe-A1-gUT"/>
                                                     <constraint firstItem="XRd-g5-P3Z" firstAttribute="centerY" secondItem="W2c-bx-L1b" secondAttribute="centerY" id="dRj-D5-lkZ"/>
+                                                    <constraint firstItem="XRd-g5-P3Z" firstAttribute="leading" secondItem="W2c-bx-L1b" secondAttribute="leading" constant="45" id="lWh-iH-ocb"/>
                                                     <constraint firstAttribute="height" constant="225" id="s02-YH-R5E"/>
                                                     <constraint firstAttribute="bottom" secondItem="Ewu-BT-uqL" secondAttribute="bottom" constant="15" id="wM3-Xr-jm3"/>
                                                 </constraints>
@@ -205,6 +230,9 @@
                                                 <state key="normal" title="Paste From Clipboard">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pasteButtonPressed:" destination="EhM-z1-dBp" eventType="touchUpInside" id="RmN-3L-gcL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -247,7 +275,7 @@
                         <outlet property="checkButton" destination="af1-0t-56W" id="TdS-41-XSC"/>
                         <outlet property="chooseButton" destination="Ewu-BT-uqL" id="EZQ-zx-MpC"/>
                         <outlet property="imageView" destination="XRd-g5-P3Z" id="6H6-aI-awo"/>
-                        <outlet property="pasteButton" destination="Fnb-wZ-K2H" id="hlE-6A-G07"/>
+                        <outlet property="pasteButton" destination="Fnb-wZ-K2H" id="yLg-og-HvO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TRr-Gs-wAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
