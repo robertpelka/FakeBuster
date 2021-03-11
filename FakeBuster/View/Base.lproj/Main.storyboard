@@ -102,9 +102,6 @@
                                 <state key="normal" title="CHECK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="yfo-DL-xhd" kind="presentation" id="cK3-dA-bXg"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -128,26 +125,142 @@
                         <outlet property="checkButton" destination="8Ur-JX-Y3D" id="tbi-mL-FuT"/>
                         <outlet property="pasteButton" destination="IkT-mc-S23" id="hOL-T2-eNS"/>
                         <outlet property="urlTextField" destination="oNB-GX-cv0" id="rjh-8m-Gr6"/>
+                        <segue destination="yfo-DL-xhd" kind="show" identifier="goToNewsResults" id="ps8-Nh-8FK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="956.92307692307691" y="93.127962085308056"/>
         </scene>
-        <!--View Controller-->
+        <!--First Result View Controller-->
         <scene sceneID="zTw-TD-qDd">
             <objects>
-                <viewController id="yfo-DL-xhd" sceneMemberID="viewController">
+                <viewController id="yfo-DL-xhd" customClass="FirstResultViewController" customModule="FakeBuster" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H8a-Hv-iFo">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="pnp-IB-4mS">
+                                <rect key="frame" x="0.0" y="530" width="390" height="260"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rPZ-oI-AW1">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="726"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="31K-P2-HU1">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="509.66666666666669"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topWaves" translatesAutoresizingMaskIntoConstraints="NO" id="2Mo-Nu-bQf">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="509.66666666666669"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JK3-rd-7eV">
+                                                <rect key="frame" x="36" y="60" width="318" height="269.66666666666669"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImF-51-W5U">
+                                                        <rect key="frame" x="132.66666666666666" y="0.0" width="52.666666666666657" height="32.666666666666664"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32.670000000000002" id="smL-Ut-Uya"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y7-ua-CsC">
+                                                        <rect key="frame" x="0.0" y="37.666666666666686" width="318" height="232"/>
+                                                        <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor eu odio a lobortis. Ut libero eros, semper a purus at, rhoncus condimentum est. Vestibulum enim enim, eleifend nec mi quis, hendrerit elementum massa. Nulla aliquet tellus non posuere faucibus. Fusce tincidunt, enim vitae bibendum accumsan, justo ex interdum turpis, commodo imperdiet risus lectus sit amet massa. Etiam imperdiet tristique massa, eu aliquam ipsum rutrum eu. Aliquam condimentum vestibulum urna, vel laoreet erat finibus eu. Nulla consequat nibh maximus lacinia vulputate. Cras ac commodo urna, id blandit lectus. Nulla nisl purus, sollicitudin eget tortor vel, viverra lacinia tortor. Morbi eu aliquet ligula. Fusce at tristique risus. Aliquam gravida elit nisi, quis sagittis eros varius sed. Nam scelerisque porta orci, quis cursus arcu tincidunt nec. Nullam ex nibh, euismod condimentum ornare nec, mattis at libero. Praesent magna tortor, fermentum sit amet ultrices eu, laoreet sit amet massa. Vivamus euismod eu neque in sollicitudin. Aenean pretium fermentum vulputate. Ut a arcu neque. Vestibulum ac augue maximus, commodo mi sed, vehicula erat. Mauris vel elit ac purus egestas viverra ut eget nisi. Nunc sed nulla at nunc accumsan tempus in vitae lacus. Mauris a urna rhoncus, condimentum leo id, scelerisque libero. Cras neque felis, ornare finibus finibus sit amet, feugiat ac elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur vulputate et augue in condimentum. Donec et eros scelerisque tortor feugiat egestas. In at libero et ipsum blandit finibus vitae at arcu.</mutableString>
+                                                        <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="JK3-rd-7eV" firstAttribute="top" secondItem="31K-P2-HU1" secondAttribute="top" constant="60" id="3RA-P2-c3w"/>
+                                            <constraint firstItem="2Mo-Nu-bQf" firstAttribute="leading" secondItem="31K-P2-HU1" secondAttribute="leading" id="Eav-XP-ow5"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Mo-Nu-bQf" secondAttribute="trailing" id="FaK-eZ-9WH"/>
+                                            <constraint firstAttribute="trailing" secondItem="JK3-rd-7eV" secondAttribute="trailing" constant="36" id="GoY-ng-EE7"/>
+                                            <constraint firstItem="2Mo-Nu-bQf" firstAttribute="top" secondItem="31K-P2-HU1" secondAttribute="top" id="Y2h-9Q-jfY"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="JK3-rd-7eV" secondAttribute="bottom" constant="180" id="Zi8-g2-83k"/>
+                                            <constraint firstAttribute="bottom" secondItem="2Mo-Nu-bQf" secondAttribute="bottom" id="mZl-Cq-6h6"/>
+                                            <constraint firstItem="JK3-rd-7eV" firstAttribute="leading" secondItem="31K-P2-HU1" secondAttribute="leading" constant="36" id="x19-Gj-DrP"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JDV-if-0av">
+                                        <rect key="frame" x="97.333333333333329" y="539.66666666666663" width="195.66666666666669" height="106.33333333333337"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS IS PROBALBY A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sG3-sX-ieb">
+                                                <rect key="frame" x="0.0" y="0.0" width="195.66666666666666" height="24.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="18"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEWS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jf7-j1-FtG">
+                                                <rect key="frame" x="38.666666666666679" y="28.666666666666742" width="118.33333333333331" height="49"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="49" id="yiP-p4-Xcu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="36"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(CERTAINTY)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5D-06-xu7">
+                                                <rect key="frame" x="36.666666666666679" y="81.666666666666742" width="122.33333333333331" height="24.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="18"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="106.33" id="KjP-n2-Cc2"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aA-EO-jux">
+                                        <rect key="frame" x="95" y="676" width="200" height="50"/>
+                                        <color key="backgroundColor" red="0.32156862745098036" green="0.3529411764705882" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="YEL-eW-Dhn"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="eu1-Ix-6Oj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="24"/>
+                                        <state key="normal" title="GO BACK">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goBackButtonPressed:" destination="yfo-DL-xhd" eventType="touchUpInside" id="4rY-gX-Yjs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="31K-P2-HU1" firstAttribute="leading" secondItem="rPZ-oI-AW1" secondAttribute="leading" id="bpP-Li-zcQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="31K-P2-HU1" secondAttribute="trailing" id="wNW-F0-Zgb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aA8-ZW-4is"/>
                         <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rPZ-oI-AW1" firstAttribute="top" secondItem="H8a-Hv-iFo" secondAttribute="top" id="224-2x-i4n"/>
+                            <constraint firstItem="pnp-IB-4mS" firstAttribute="leading" secondItem="aA8-ZW-4is" secondAttribute="leading" id="CWn-vV-mSt"/>
+                            <constraint firstItem="rPZ-oI-AW1" firstAttribute="leading" secondItem="aA8-ZW-4is" secondAttribute="leading" id="Day-v7-dku"/>
+                            <constraint firstItem="aA8-ZW-4is" firstAttribute="trailing" secondItem="rPZ-oI-AW1" secondAttribute="trailing" id="Fpd-X4-pvl"/>
+                            <constraint firstAttribute="bottom" secondItem="pnp-IB-4mS" secondAttribute="bottom" id="TYu-HJ-nIT"/>
+                            <constraint firstItem="aA8-ZW-4is" firstAttribute="trailing" secondItem="pnp-IB-4mS" secondAttribute="trailing" id="e8z-eh-1Uc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="rPZ-oI-AW1" secondAttribute="bottom" constant="30" id="zSQ-eZ-G9s"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0KR-My-Vnz"/>
+                    <connections>
+                        <outlet property="contentLabel" destination="5Y7-ua-CsC" id="X5b-tv-kay"/>
+                        <outlet property="goBackButton" destination="0aA-EO-jux" id="qm8-pP-oWg"/>
+                        <outlet property="procentLabel" destination="Z5D-06-xu7" id="l47-Ae-cE3"/>
+                        <outlet property="resultLabel" destination="Jf7-j1-FtG" id="45W-Ov-2d3"/>
+                        <outlet property="titleLabel" destination="ImF-51-W5U" id="j9W-uq-aec"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dmc-V7-mB2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1765" y="93"/>
+            <point key="canvasLocation" x="1764.6153846153845" y="92.417061611374407"/>
         </scene>
         <!--Photo Manipulation-->
         <scene sceneID="eoa-a4-Bc1">
@@ -314,7 +427,9 @@
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
+        <image name="greenGradient" width="374" height="260"/>
+        <image name="topWaves" width="377" height="512"/>
         <image name="waves" width="375" height="437"/>
-        <image name="wavesMirrored" width="375" height="309"/>
+        <image name="wavesMirrored" width="384" height="318"/>
     </resources>
 </document>

@@ -16,6 +16,11 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var checkButton: UIButton!
     
     let imagePicker = UIImagePickerController()
+    var userImage: UIImage? {
+        get {
+            return imageView.image
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

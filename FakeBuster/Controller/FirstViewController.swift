@@ -14,6 +14,12 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var urlTextField: UITextField!
     
+    var userURL: String? {
+        get {
+            return urlTextField.text
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +33,15 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func pasteButtonPressed(_ sender: UIButton) {
-        urlTextField.text = UIPasteboard.general.string
+        if let pasteboardString = UIPasteboard.general.string {
+            urlTextField.text = pasteboardString
+        }
     }
     
+}
+
+extension FirstViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
 }
