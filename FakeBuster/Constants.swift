@@ -8,5 +8,6 @@
 struct K {
     struct Segues {
         static let news = "goToNewsResults"
+        static let image = "goToImageResults"
     }
 }

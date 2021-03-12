@@ -14,12 +14,6 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var urlTextField: UITextField!
     
-    var userURL: String? {
-        get {
-            return urlTextField.text
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +29,19 @@ class FirstViewController: UIViewController {
     @IBAction func pasteButtonPressed(_ sender: UIButton) {
         if let pasteboardString = UIPasteboard.general.string {
             urlTextField.text = pasteboardString
+        }
+    }
+    
+    @IBAction func checkButtonPressed(_ sender: UIButton) {
+        if (urlTextField.text != "") {
+            performSegue(withIdentifier: K.Segues.news, sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == K.Segues.news) {
+            let firstResultVC = segue.destination as! FirstResultViewController
+            firstResultVC.urlString = urlTextField.text
         }
     }
     

@@ -19,6 +19,7 @@
 		4829008525F9F000001588A8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4829008425F9F000001588A8 /* SecondViewController.swift */; };
 		484ED6D925FA594E007E673C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484ED6D825FA594E007E673C /* Constants.swift */; };
 		48CA58A625FAB74200847D06 /* FirstResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA58A525FAB74200847D06 /* FirstResultViewController.swift */; };
+		48CA58A925FC0A1C00847D06 /* SecondResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA58A825FC0A1C00847D06 /* SecondResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		4829008425F9F000001588A8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		484ED6D825FA594E007E673C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48CA58A525FAB74200847D06 /* FirstResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstResultViewController.swift; sourceTree = "<group>"; };
+		48CA58A825FC0A1C00847D06 /* SecondResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				4829006225F56765001588A8 /* FirstViewController.swift */,
 				4829008425F9F000001588A8 /* SecondViewController.swift */,
 				48CA58A525FAB74200847D06 /* FirstResultViewController.swift */,
+				48CA58A825FC0A1C00847D06 /* SecondResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48CA58A625FAB74200847D06 /* FirstResultViewController.swift in Sources */,
+				48CA58A925FC0A1C00847D06 /* SecondResultViewController.swift in Sources */,
 				4829008525F9F000001588A8 /* SecondViewController.swift in Sources */,
 				4829007725F5687E001588A8 /* FakeNewsClassifier.mlmodel in Sources */,
 				4829007425F56786001588A8 /* ImageManipulationClassifier.mlmodel in Sources */,

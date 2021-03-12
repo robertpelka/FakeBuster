@@ -16,11 +16,6 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var checkButton: UIButton!
     
     let imagePicker = UIImagePickerController()
-    var userImage: UIImage? {
-        get {
-            return imageView.image
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +36,20 @@ class SecondViewController: UIViewController {
             imageView.image = pasteboardImage
         }
     }
-
+    
+    @IBAction func checkButtonPressed(_ sender: UIButton) {
+        if (imageView.image != nil) {
+            performSegue(withIdentifier: K.Segues.image, sender: self)            
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == K.Segues.image), let image = imageView.image {
+            let secondResultVC = segue.destination as! SecondResultViewController
+            secondResultVC.choosenImage = image
+        }
+    }
+    
 }
 
 extension SecondViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
