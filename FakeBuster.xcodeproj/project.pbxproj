@@ -20,6 +20,7 @@
 		484ED6D925FA594E007E673C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484ED6D825FA594E007E673C /* Constants.swift */; };
 		48CA58A625FAB74200847D06 /* FirstResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA58A525FAB74200847D06 /* FirstResultViewController.swift */; };
 		48CA58A925FC0A1C00847D06 /* SecondResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CA58A825FC0A1C00847D06 /* SecondResultViewController.swift */; };
+		7EEA02A8D699BD36E1E7211E /* Pods_FakeBuster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D99CD5A89D3B5BBC9BBD29 /* Pods_FakeBuster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,9 @@
 		484ED6D825FA594E007E673C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48CA58A525FAB74200847D06 /* FirstResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstResultViewController.swift; sourceTree = "<group>"; };
 		48CA58A825FC0A1C00847D06 /* SecondResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondResultViewController.swift; sourceTree = "<group>"; };
+		BD7F8D8EE28C5283E90FC4FA /* Pods-FakeBuster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeBuster.release.xcconfig"; path = "Target Support Files/Pods-FakeBuster/Pods-FakeBuster.release.xcconfig"; sourceTree = "<group>"; };
+		D9D99CD5A89D3B5BBC9BBD29 /* Pods_FakeBuster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FakeBuster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E82D622E09752BC7DC2DD1BC /* Pods-FakeBuster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FakeBuster.debug.xcconfig"; path = "Target Support Files/Pods-FakeBuster/Pods-FakeBuster.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EEA02A8D699BD36E1E7211E /* Pods_FakeBuster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D8A937931E0F4BF7A689C32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9D99CD5A89D3B5BBC9BBD29 /* Pods_FakeBuster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4829005225F56765001588A8 = {
 			isa = PBXGroup;
 			children = (
 				4829005D25F56765001588A8 /* FakeBuster */,
 				4829005C25F56765001588A8 /* Products */,
+				EB95488C45CB74FEC5BD8541 /* Pods */,
+				0D8A937931E0F4BF7A689C32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +135,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EB95488C45CB74FEC5BD8541 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E82D622E09752BC7DC2DD1BC /* Pods-FakeBuster.debug.xcconfig */,
+				BD7F8D8EE28C5283E90FC4FA /* Pods-FakeBuster.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4829006F25F5676A001588A8 /* Build configuration list for PBXNativeTarget "FakeBuster" */;
 			buildPhases = (
+				1B5D9FE9C1474C524852275E /* [CP] Check Pods Manifest.lock */,
 				4829005725F56765001588A8 /* Sources */,
 				4829005825F56765001588A8 /* Frameworks */,
 				4829005925F56765001588A8 /* Resources */,
+				34D3F1634FE2CFD286B2FE2D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +212,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B5D9FE9C1474C524852275E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FakeBuster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34D3F1634FE2CFD286B2FE2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FakeBuster/Pods-FakeBuster-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FakeBuster/Pods-FakeBuster-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FakeBuster/Pods-FakeBuster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4829005725F56765001588A8 /* Sources */ = {
@@ -343,6 +412,7 @@
 		};
 		4829007025F5676A001588A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E82D622E09752BC7DC2DD1BC /* Pods-FakeBuster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,6 +432,7 @@
 		};
 		4829007125F5676A001588A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD7F8D8EE28C5283E90FC4FA /* Pods-FakeBuster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

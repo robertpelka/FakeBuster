@@ -17,6 +17,8 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        urlTextField.delegate = self
+        
         backgroundView.layer.cornerRadius = 15
         pasteButton.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         pasteButton.layer.cornerRadius = 13
@@ -49,6 +51,7 @@ class FirstViewController: UIViewController {
 
 extension FirstViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true
     }
 }

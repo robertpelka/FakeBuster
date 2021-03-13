@@ -143,7 +143,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="pnp-IB-4mS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redGradient" translatesAutoresizingMaskIntoConstraints="NO" id="pnp-IB-4mS">
                                 <rect key="frame" x="0.0" y="584" width="390" height="260"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rPZ-oI-AW1">
@@ -155,20 +155,20 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topWaves" translatesAutoresizingMaskIntoConstraints="NO" id="2Mo-Nu-bQf">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="512"/>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JK3-rd-7eV">
-                                                <rect key="frame" x="36" y="60" width="318" height="56.666666666666657"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JK3-rd-7eV">
+                                                <rect key="frame" x="36" y="60.000000000000007" width="318" height="66.666666666666686"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImF-51-W5U">
-                                                        <rect key="frame" x="132.66666666666666" y="0.0" width="52.666666666666657" height="32.666666666666664"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImF-51-W5U">
+                                                        <rect key="frame" x="0.0" y="0.0" width="52.666666666666664" height="32.666666666666664"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="32.670000000000002" id="smL-Ut-Uya"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32.670000000000002" id="smL-Ut-Uya"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="24"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y7-ua-CsC">
-                                                        <rect key="frame" x="132" y="37.666666666666671" width="54" height="19"/>
+                                                        <rect key="frame" x="0.0" y="47.666666666666671" width="54" height="19"/>
                                                         <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -189,32 +189,23 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JDV-if-0av">
-                                        <rect key="frame" x="98.000000000000014" y="542" width="194.33333333333337" height="106.33333333333337"/>
+                                        <rect key="frame" x="41" y="542" width="308" height="77.666666666666629"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS IS PROBABLY A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sG3-sX-ieb">
-                                                <rect key="frame" x="0.0" y="0.0" width="194.33333333333334" height="24.666666666666668"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COULDN'T MAKE A PREDICTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sG3-sX-ieb">
+                                                <rect key="frame" x="0.0" y="0.0" width="308" height="24.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="18"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEWS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jf7-j1-FtG">
-                                                <rect key="frame" x="37.999999999999993" y="28.666666666666629" width="118.33333333333331" height="49"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="49" id="yiP-p4-Xcu"/>
-                                                </constraints>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jf7-j1-FtG">
+                                                <rect key="frame" x="86.333333333333329" y="28.666666666666629" width="135.66666666666669" height="49"/>
                                                 <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="36"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(CERTAINTY)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5D-06-xu7">
-                                                <rect key="frame" x="35.999999999999993" y="81.666666666666629" width="122.33333333333331" height="24.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="18"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="106.33" id="KjP-n2-Cc2"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74" id="rn5-Ot-Nmi"/>
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aA-EO-jux">
@@ -253,9 +244,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="0KR-My-Vnz"/>
                     <connections>
+                        <outlet property="backgroundImage" destination="pnp-IB-4mS" id="79b-H9-Fd6"/>
                         <outlet property="contentLabel" destination="5Y7-ua-CsC" id="X5b-tv-kay"/>
+                        <outlet property="descriptionLabel" destination="sG3-sX-ieb" id="lrN-9N-eaV"/>
                         <outlet property="goBackButton" destination="0aA-EO-jux" id="qm8-pP-oWg"/>
-                        <outlet property="procentLabel" destination="Z5D-06-xu7" id="l47-Ae-cE3"/>
                         <outlet property="resultLabel" destination="Jf7-j1-FtG" id="45W-Ov-2d3"/>
                         <outlet property="titleLabel" destination="ImF-51-W5U" id="j9W-uq-aec"/>
                     </connections>
@@ -465,16 +457,16 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TqG-r5-KSW">
-                                        <rect key="frame" x="71.666666666666671" y="542" width="246.66666666666663" height="106.33333333333337"/>
+                                        <rect key="frame" x="98.666666666666686" y="542" width="193" height="106.33333333333337"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS IMAGE IS PROBABLY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb3-8O-kic">
-                                                <rect key="frame" x="0.0" y="0.0" width="246.66666666666666" height="24.666666666666668"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS IMAGE IS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb3-8O-kic">
+                                                <rect key="frame" x="26.666666666666657" y="0.0" width="139.33333333333334" height="24.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="18"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORIGINAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ik-bN-WfV">
-                                                <rect key="frame" x="27" y="28.666666666666629" width="193" height="49"/>
+                                                <rect key="frame" x="0.0" y="28.666666666666629" width="193" height="49"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="49" id="PkM-FT-Eap"/>
                                                 </constraints>
@@ -483,7 +475,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(CERTAINTY)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6S-bC-fs3">
-                                                <rect key="frame" x="62.333333333333336" y="81.666666666666629" width="122.33333333333331" height="24.666666666666671"/>
+                                                <rect key="frame" x="35.333333333333336" y="81.666666666666629" width="122.33333333333331" height="24.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Prata-Regular" family="Prata" pointSize="18"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -548,6 +540,7 @@
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="greenGradient" width="374" height="260"/>
+        <image name="redGradient" width="374" height="260"/>
         <image name="topWaves" width="377" height="512"/>
         <image name="topWavesMirrored" width="377" height="512"/>
         <image name="waves" width="375" height="437"/>
